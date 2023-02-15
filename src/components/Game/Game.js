@@ -5,8 +5,9 @@ import { WORDS } from '../../data';
 import GuessInput from '../GuessInput';
 import GuessResults from '../GuessResults';
 // Pick a random word on every pageload.
-const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
+
+const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
@@ -15,10 +16,10 @@ function Game() {
 	function handleSubmitGuess(tentativeGuess) {
 		setGuesses([...guesses, tentativeGuess]);
 	}
-	console.log('Game guesses', guesses);
+
 	return (
 		<>
-			<GuessResults guesses={guesses} />
+			<GuessResults guesses={guesses} answer={answer} />
 			<GuessInput handleSubmitGuess={handleSubmitGuess} />
 		</>
 	);
