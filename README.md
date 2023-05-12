@@ -6,7 +6,7 @@ A Wordle clone made with React!
 ## Features ✨
 
 - Guess the correct 5-letter word with a maximum of 6 attempts.
-- You will see if each letter belongs to the correct word or not. If so, you will see if it is in the right place or not.
+- You will see if each letter belongs to the correct word. If so, you will see if it is in the right place or not.
 
 ## Tech Stack 🪄
 
