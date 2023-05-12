@@ -32,3 +32,8 @@ These would be the possible next steps for this project:
 ## See it in action! 🔥
 
 [Watch the project live](https://wordgamereact.vercel.app/)
+
+
+
+This was a project made on the [The Joy Of React](https://www.joyofreact.com/) course by Josh Comeau.
+That was built by me (tough work!), not copy-pasted. Only a starter code was provided.
