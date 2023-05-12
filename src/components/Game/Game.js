@@ -8,26 +8,21 @@ import GuessList from '../GuessList/GuessList';
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
-// console.info({ answer });
+console.info({ answer });
 
 function Game() {
 	const [guessList, setGuessList] = React.useState([]);
 
 	function handleAddToGuessList(word) {
-		const nextGuess = {
-			word: word,
-			id: crypto.randomUUID(),
-		};
+		const nextGuess = word;
 
 		const nextGuessList = [...guessList, nextGuess];
 		setGuessList(nextGuessList);
-		console.log('Guess: ', nextGuess);
-		console.log('GuessList:', nextGuessList);
 	}
 
 	return (
 		<>
-			<GuessList guessList={guessList} />
+			<GuessList guessList={guessList} answer={answer} />
 			<GuessInput handleAddToGuessList={handleAddToGuessList} />
 		</>
 	);

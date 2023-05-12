@@ -8,7 +8,7 @@ function GuessInput({ handleAddToGuessList }) {
 		if (inputValue.length !== 5) return;
 
 		setInputValue('');
-		console.log('Submitted: ', inputValue);
+		// console.log('Submitted: ', inputValue);
 
 		handleAddToGuessList(inputValue);
 	}
@@ -30,7 +30,7 @@ function GuessInput({ handleAddToGuessList }) {
 				onChange={(event) => {
 					const uppercaseValue = event.target.value.toUpperCase();
 					setInputValue(uppercaseValue);
-					console.log(uppercaseValue);
+					// console.log(uppercaseValue);
 				}}
 			/>
 		</form>
