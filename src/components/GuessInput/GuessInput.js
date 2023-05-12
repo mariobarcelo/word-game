@@ -1,19 +1,7 @@
 import React from 'react';
 
-function GuessInput({ guessList, setGuessList }) {
+function GuessInput({ handleAddToGuessList }) {
 	const [inputValue, setInputValue] = React.useState('');
-
-	function handleAddToGuessList() {
-		const nextGuess = {
-			word: inputValue,
-			id: crypto.randomUUID(),
-		};
-
-		const nextGuessList = [...guessList, nextGuess];
-		setGuessList(nextGuessList);
-		console.log('Guess: ', nextGuess);
-		console.log('GuessList:', nextGuessList);
-	}
 
 	function handleSubmit(event) {
 		event.preventDefault();
@@ -22,7 +10,7 @@ function GuessInput({ guessList, setGuessList }) {
 		setInputValue('');
 		console.log('Submitted: ', inputValue);
 
-		handleAddToGuessList();
+		handleAddToGuessList(inputValue);
 	}
 
 	return (

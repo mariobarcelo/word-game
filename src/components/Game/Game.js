@@ -13,10 +13,22 @@ const answer = sample(WORDS);
 function Game() {
 	const [guessList, setGuessList] = React.useState([]);
 
+	function handleAddToGuessList(word) {
+		const nextGuess = {
+			word: word,
+			id: crypto.randomUUID(),
+		};
+
+		const nextGuessList = [...guessList, nextGuess];
+		setGuessList(nextGuessList);
+		console.log('Guess: ', nextGuess);
+		console.log('GuessList:', nextGuessList);
+	}
+
 	return (
 		<>
 			<GuessList guessList={guessList} />
-			<GuessInput guessList={guessList} setGuessList={setGuessList} />
+			<GuessInput handleAddToGuessList={handleAddToGuessList} />
 		</>
 	);
 }
